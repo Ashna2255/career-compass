@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAREER COMPASS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section with Background Image -->
+    <div class="hero-section relative mb-8">
+        <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/12839/images/766db4c-0bfb-e6f6-1a-a325213be_Motivational-Speaker.jpg" alt="Career Compass Hero" class="w-full h-64 object-cover"/>
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="text-center text-white">
+                <h1 class="text-4xl font-bold mb-2">CAREER COMPASS</h1>
+                <p class="text-xl">Discover Your Perfect Career Path</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto p-6">
+        <!-- Logout Button -->
+        <div class="flex justify-end mb-4">
+            <button id="logout-btn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Logout</button>
+        </div>
+        
+        <div class="mb-6">
+            <div class="flex justify-center space-x-4 border-b">
+                <button class="tab-btn px-4 py-2 font-medium text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 active" data-tab="explore">Explore Careers</button>
+                <button onclick="showCounselors()" class="tab-btn px-4 py-2 font-medium text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600" data-tab="counselors">Counselors</button>
+                <button class="tab-btn px-4 py-2 font-medium text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600" data-tab="aptitude">Aptitude Test</button>
+                <!-- <button class="tab-btn px-4 py-2 font-medium text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600" data-tab="schedule">Schedule Session</button> -->
+                <button class="tab-btn px-4 py-2 font-medium text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600" data-tab="feedback">Feedback</button>
+                <button class="tab-btn px-4 py-2 font-medium text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600" data-tab="about">About Us</button>
+            </div>
+        </div>
+
+        <!-- Explore Careers Tab -->
+        <div id="explore" class="tab-content active">
+            <div id="careers-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Engineering -->
+                <div class="card bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRZOecBD1NnwMhC6jU_9JkFlMy1fJQ1cg_gA42_sALEGimJNVxLwm67JWple_SpcDERus&usqp=CAU" alt="Engineering" class="career-image"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Engineering</h3>
+                        <p class="text-gray-600 mb-4">Explore various engineering fields including computer science, mechanical, and electrical engineering.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold">Key Courses:</h4>
+                                <ul class="list-disc pl-4 text-gray-600">
+                                    <li>B.Tech</li>
+                                    <li>BE</li>
+                                    <li>B.Sc Engineering</li>
+                                </ul>
+                            </div>
+                            <button onclick="showCareer('Engineering')" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700" >Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Sciences -->
+                <div class="card bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://wallpapers.com/images/hd/doctor-with-globe-in-hand-hd-medical-dff7ahiwc5xsfjm0.jpg" alt="Medical Sciences" class="career-image"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Medical Sciences</h3>
+                        <p class="text-gray-600 mb-4">Career opportunities in healthcare, medicine, and related fields.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold">Key Courses:</h4>
+                                <ul class="list-disc pl-4 text-gray-600">
+                                    <li>MBBS</li>
+                                    <li>BDS</li>
+                                    <li>B.Pharm</li>
+                                </ul>
+                            </div>
+                            <button onclick="showCareer('Medical')" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commerce -->
+                <div class="card bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://plus.unsplash.com/premium_photo-1723291359453-aea7e6bcbebd?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGxhbm5pbmclMjBtZWV0aW5nfGVufDB8fDB8fHww" alt="Commerce & Management" class="career-image"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Commerce & Management</h3>
+                        <p class="text-gray-600 mb-4">Business, finance, and management career paths.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold">Key Courses:</h4>
+                                <ul class="list-disc pl-4 text-gray-600">
+                                    <li>BBA</li>
+                                    <li>B.Com</li>
+                                    <li>CA</li>
+                                </ul>
+                            </div>
+                            <button onclick="showCareer('Commerce')" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <!--Arts & Humanities-->
+                <div class="card bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D12AQGODmTGyvdSmg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1698214830141?e=2147483647&v=beta&t=7EqGqfQzAVAAq8Pfhd03g91ux2VDppddKQrQUgsBmYM" alt="Arts & Humanities" class="career-image"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Arts & Humanities</h3>
+                        <p class="text-gray-600 mb-4">Explore careers in creative arts, literature, and social sciences.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold">Key Courses:</h4>
+                                <ul class="list-disc pl-4 text-gray-600">
+                                    <li>BA</li>
+                                    <li>BFA</li>
+                                    <li>BMM</li>
+                                    <li>BJM</li>
+                                </ul>
+                            </div>
+                            <button onclick="showCareer('Arts')" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Design & Architecture-->
+                <div class="card bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://lldev.co.za/images/Architecture-Design-Wallpapers-HD-04-2560x1600.jpg" alt="Design & Architecture" class="career-image"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Design & Architecture</h3>
+                        <p class="text-gray-600 mb-4">Career paths in visual design, user experience, and architectural design.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold">Key Courses:</h4>
+                                <ul class="list-disc pl-4 text-gray-600">
+                                    <li>B.Arch</li>
+                                    <li>B.Des</li>
+                                    <li>BID</li>
+                                </ul>
+                            </div>
+                            <button onclick="showCareer('Design')" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                 <!--Hotel Management & Tourism-->
+                 <div class="card bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://www.dei.ac.in/dei/arts/images/BVOC/Tourism.jpg" alt="Hotel Management & Tourism" class="career-image"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Hotel Management & Tourism</h3>
+                        <p class="text-gray-600 mb-4">Opportunities in hospitality, tourism, and service industry.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold">Key Courses:</h4>
+                                <ul class="list-disc pl-4 text-gray-600">
+                                    <li>BHM</li>
+                                    <li>BTTM</li>
+                                    <li>BBA in Hospitality</li>
+                                </ul>
+                            </div>
+                            <button onclick="showCareer('Hotel')"class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                 <!--Law-->
+                 <div class="card bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://media.istockphoto.com/id/1449334081/photo/statue-of-lady-justice-on-desk-of-a-judge-or-lawyer.jpg?s=612x612&w=0&k=20&c=139ZS1ycMRXBqnPEWV3l08zBLNe40WPiAudVnmeQrl8=" alt="Law" class="career-image"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Law</h3>
+                        <p class="text-gray-600 mb-4">Legal careers and judiciary services.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold">Key Courses:</h4>
+                                <ul class="list-disc pl-4 text-gray-600">
+                                    <li>LLB</li>
+                                    <li>BA LLB</li>
+                                    <li>BBA LLB</li>
+                                </ul>
+                            </div>
+                            <button onclick="showCareer('Law')" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!--Agriculture & Environmental Science-->
+                 <div class="card bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://media.istockphoto.com/id/1182619005/photo/biology-laboratory-nature-and-science-plants-with-biochemistry-structure-on-green-background.jpg?s=612x612&w=0&k=20&c=TLqoeYYlVMQlhA_iW9GOFYKVWAl67V3nTRTSPYpkwOE=" alt="Agriculture & Environmental Science" class="career-image"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Agriculture & Environmental Science</h3>
+                        <p class="text-gray-600 mb-4">Careers in agriculture, environmental conservation, and sustainability.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold">Key Courses:</h4>
+                                <ul class="list-disc pl-4 text-gray-600">
+                                    <li>B.Sc Agriculture</li>
+                                    <li>B.Sc Environmental Science</li>
+                                </ul>
+                            </div>
+                            <button onclick="showCareer('Agriculture')" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                 <!--Aviation & Aerospace-->
+                <div class="card bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://media.istockphoto.com/id/1406270929/photo/civil-aviation-and-commercial-airlines-travel-and-business-trips-transport-system-and.jpg?s=612x612&w=0&k=20&c=IdaXOB_xWYigJRqifnP5iIWHGW2iVuM46oS7Y6u1b-0=" alt="Aviation & Aerospace" class="career-image"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Aviation & Aerospace</h3>
+                        <p class="text-gray-600 mb-4">Careers in aviation industry and aerospace technology.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold">Key Courses:</h4>
+                                <ul class="list-disc pl-4 text-gray-600">
+                                    <li>B.Sc Aviation</li>
+                                    <li>Aircraft Maintenance Engineering</li>
+                                </ul>
+                            </div>
+                            <button onclick="showCareer('Aviation')" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="career-details" class="hidden">
+                <!-- career details will be dynamically loaded here -->
+                <div class="career-engineering" class="hidden">
+                    <h1>Engineering Courses in India</h1>
+                    <p>Engineering is one of the most popular career choices in India, offering a variety of disciplines at undergraduate and postgraduate levels. The field includes core branches like Mechanical, Civil, and Electrical Engineering, as well as modern specializations like Artificial Intelligence and Data Science.</p>
+                    
+                    <h2>B.Tech/B.E. (Bachelor of Technology/Bachelor of Engineering)</h2>
+                    <p><strong>Duration:</strong> 4 years</p>
+                    <p><strong>Eligibility:</strong> 10+2 with Physics, Chemistry, and Mathematics (PCM)</p>
+                    <h3>Entrance Exams:</h3>
+                    <ul>
+                        <li><strong>National Level:</strong> JEE Main, JEE Advanced</li>
+                        <li><strong>State-Level:</strong> MHT-CET, KCET, WBJEE, AP EAMCET, TS EAMCET, etc.</li>
+                        <li><strong>Private Universities:</strong> BITSAT (BITS Pilani), VITEEE (VIT Vellore), SRMJEEE (SRM University)</li>
+                    </ul>
+                    
+                    <h3>Top Colleges:</h3>
+                    <ul>
+                        <li><strong>IITs:</strong> IIT Bombay, IIT Delhi, IIT Madras, IIT Kanpur, etc.</li>
+                        <li><strong>NITs:</strong> NIT Trichy, NIT Surathkal, NIT Warangal, etc.</li>
+                        <li><strong>Other Top Institutes:</strong> BITS Pilani, IIIT Hyderabad, VIT Vellore, DTU Delhi</li>
+                    </ul>
+                    
+                    <h2>Major Specializations in B.Tech/B.E.:</h2>
+                    <ul>
+                        <li><strong>Computer Science and Engineering (CSE)</strong></li>
+                        <li><strong>Mechanical Engineering</strong></li>
+                        <li><strong>Civil Engineering</strong></li>
+                        <li><strong>Electrical Engineering</strong></li>
+                        <li><strong>Electronics and Communication Engineering (ECE)</strong></li>
+                        <li><strong>Information Technology (IT)</strong></li>
+                        <li><strong>Artificial Intelligence and Data Science</strong></li>
+                        <li><strong>Aeronautical/Aerospace Engineering</strong></li>
+                        <li><strong>Biotechnology Engineering</strong></li>
+                        <li><strong>Chemical Engineering</strong></li>
+                        <li><strong>Petroleum Engineering</strong></li>
+                        <li><strong>Robotics and Automation Engineering</strong></li>
+                    </ul>
+                    
+                    <h2>M.Tech/M.E. (Master of Technology/Master of Engineering)</h2>
+                    <p><strong>Duration:</strong> 2 years</p>
+                    <p><strong>Eligibility:</strong> B.Tech/B.E. in a relevant field</p>
+                    <h3>Entrance Exams:</h3>
+                    <ul>
+                        <li>GATE (Graduate Aptitude Test in Engineering)</li>
+                        <li>University-Specific Exams: VITMEE, SRMJEEE-PG</li>
+                    </ul>
+                    
+                    <h3>Top Colleges:</h3>
+                    <ul>
+                        <li>IITs, NITs, IIITs</li>
+                        <li>Indian Institute of Science (IISc), Bangalore</li>
+                        <li>ISRO-affiliated institutes for Aerospace & Space Engineering</li>
+                    </ul>
+                    
+                    <h2>Diploma in Engineering (Polytechnic)</h2>
+                    <p><strong>Duration:</strong> 3 years</p>
+                    <p><strong>Eligibility:</strong> 10th pass (or 12th pass for lateral entry)</p>
+                    <h3>Entrance Exams:</h3>
+                    <ul>
+                        <li>State polytechnic entrance exams like JEECUP, AP POLYCET, TS POLYCET</li>
+                    </ul>
+                    
+                    <h3>Top Colleges:</h3>
+                    <ul>
+                        <li>Government Polytechnic Colleges in each state</li>
+                        <li>MSU Baroda</li>
+                        <li>Jadavpur University</li>
+                    </ul>
+                    
+                    <h2>Conclusion</h2>
+                    <p>Engineering in India offers a vast array of specializations with excellent career prospects. Admission to top colleges is primarily through JEE Main, JEE Advanced, and state-level entrance exams. With the rise of AI, data science, and automation, engineering remains one of the most dynamic and evolving fields for students.</p>
+                </div>
+                <div id="career-medical" class="hidden">
+                    <h2>Medical Courses in India</h2>
+                
+                    <div class="course">
+                        <h3>MBBS (Bachelor of Medicine, Bachelor of Surgery)</h3>
+                        <p><strong>Duration:</strong> 5.5 years (including 1-year internship)</p>
+                        <p><strong>Eligibility:</strong> 10+2 with Physics, Chemistry, and Biology (PCB)</p>
+                        <p><strong>Entrance Exam:</strong> NEET-UG</p>
+                        <p><strong>Top Colleges:</strong> AIIMS Delhi, CMC Vellore, MAMC Delhi, AFMC Pune, KMC Manipal</p>
+                    </div>
+                
+                    <div class="course">
+                        <h3>BDS (Bachelor of Dental Surgery)</h3>
+                        <p><strong>Duration:</strong> 5 years (including 1-year internship)</p>
+                        <p><strong>Eligibility:</strong> 10+2 with PCB</p>
+                        <p><strong>Entrance Exam:</strong> NEET-UG</p>
+                        <p><strong>Top Colleges:</strong> Maulana Azad Institute of Dental Sciences, Manipal College of Dental Sciences, Govt. Dental College Mumbai</p>
+                    </div>
+                
+                    <div class="course">
+                        <h3>BAMS (Bachelor of Ayurvedic Medicine and Surgery)</h3>
+                        <p><strong>Duration:</strong> 5.5 years (including 1-year internship)</p>
+                        <p><strong>Eligibility:</strong> 10+2 with PCB</p>
+                        <p><strong>Entrance Exam:</strong> NEET-UG</p>
+                        <p><strong>Top Colleges:</strong> National Institute of Ayurveda Jaipur, BHU Varanasi, Govt. Ayurveda College Kerala</p>
+                    </div>
+                
+                    <div class="course">
+                        <h3>BHMS (Bachelor of Homeopathic Medicine and Surgery)</h3>
+                        <p><strong>Duration:</strong> 5.5 years (including 1-year internship)</p>
+                        <p><strong>Eligibility:</strong> 10+2 with PCB</p>
+                        <p><strong>Entrance Exam:</strong> NEET-UG</p>
+                        <p><strong>Top Colleges:</strong> National Institute of Homeopathy Kolkata, Bharati Vidyapeeth Pune, Nehru Homeopathic Medical College Delhi</p>
+                    </div>
+                
+                    <div class="course">
+                        <h3>BPT (Bachelor of Physiotherapy)</h3>
+                        <p><strong>Duration:</strong> 4.5 years (including a 6-month internship)</p>
+                        <p><strong>Eligibility:</strong> 10+2 with PCB</p>
+                        <p><strong>Entrance Exam:</strong> Varies by college</p>
+                        <p><strong>Top Colleges:</strong> CMC Vellore, Manipal College of Health Professions, Sri Ramachandra Institute Chennai</p>
+                    </div>
+                
+                    <div class="course">
+                        <h3>B.Pharm (Bachelor of Pharmacy)</h3>
+                        <p><strong>Duration:</strong> 4 years</p>
+                        <p><strong>Eligibility:</strong> 10+2 with PCB/PCM</p>
+                        <p><strong>Entrance Exam:</strong> GPAT, MHT-CET, WBJEE-PHARMA</p>
+                        <p><strong>Top Colleges:</strong> Jamia Hamdard Delhi, ICT Mumbai, NIPER Mohali</p>
+                    </div>
+                
+                    <div class="course">
+                        <h3>B.Sc Nursing</h3>
+                        <p><strong>Duration:</strong> 4 years</p>
+                        <p><strong>Eligibility:</strong> 10+2 with PCB</p>
+                        <p><strong>Entrance Exam:</strong> AIIMS Nursing, JIPMER Nursing</p>
+                        <p><strong>Top Colleges:</strong> AIIMS Delhi, CMC Vellore, AFMC Pune</p>
+                    </div>
+                
+                    <h3>Postgraduate Medical Courses</h3>
+                    <ul>
+                        <li>MD/MS (Doctor of Medicine/Master of Surgery) – NEET-PG required</li>
+                        <li>MDS (Master of Dental Surgery) – NEET MDS required</li>
+                        <li>M.Pharm (Master of Pharmacy) – GPAT required</li>
+                        <li>MPT (Master of Physiotherapy) – Institute-specific exams</li>
+                    </ul>
+                </div>
+                <div id="career-commerce" class="hidden">
+                    <h1>Commerce and Management Courses in India</h1>
+                    <p>Commerce and Management courses in India offer diverse career opportunities in finance, accounting, business administration, marketing, and entrepreneurship. These courses are available at undergraduate, postgraduate, and diploma levels.</p>
+                    
+                    <h2>1. Undergraduate Courses (UG)</h2>
+                    
+                    <h3>1.1 B.Com (Bachelor of Commerce)</h3>
+                    <p><strong>Duration:</strong> 3 years</p>
+                    <p><strong>Eligibility:</strong> 10+2 with Commerce or any stream</p>
+                    <p><strong>Entrance Exams:</strong> Merit-based or entrance exams like CUET, IPU CET</p>
+                    
+                    <h4>Specializations:</h4>
+                    <ul>
+                        <li>Accounting and Finance</li>
+                        <li>Banking and Insurance</li>
+                        <li>Taxation</li>
+                        <li>Economics</li>
+                    </ul>
+                    
+                    <h4>Top Colleges:</h4>
+                    <ul>
+                        <li>Shri Ram College of Commerce (SRCC), Delhi</li>
+                        <li>Hindu College, Delhi</li>
+                        <li>St. Xavier's College, Mumbai</li>
+                        <li>Loyola College, Chennai</li>
+                    </ul>
+                    
+                    <h3>1.2 B.Com (Hons.)</h3>
+                    <p><strong>Focus Areas:</strong> In-depth study of finance, accounting, taxation, and business law</p>
+                    <p><strong>Entrance Exams:</strong> DUET, CUET, Christ University Entrance Test</p>
+                    
+                    <h3>1.3 BBA (Bachelor of Business Administration)</h3>
+                    <p><strong>Duration:</strong> 3 years</p>
+                    <p><strong>Eligibility:</strong> 10+2 in any stream</p>
+                    
+                    <h4>Entrance Exams:</h4>
+                    <ul>
+                        <li>DU JAT (Delhi University)</li>
+                        <li>NPAT (NMIMS)</li>
+                        <li>IPMAT (IIM Indore & Rohtak)</li>
+                        <li>SET (Symbiosis)</li>
+                    </ul>
+                    
+                    <h4>Specializations:</h4>
+                    <ul>
+                        <li>Marketing</li>
+                        <li>Human Resource Management</li>
+                        <li>Finance</li>
+                        <li>International Business</li>
+                    </ul>
+                    
+                    <h4>Top Colleges:</h4>
+                    <ul>
+                        <li>IIM Indore (IPM Program)</li>
+                        <li>Shaheed Sukhdev College of Business Studies, Delhi</li>
+                        <li>NMIMS Mumbai</li>
+                        <li>Christ University, Bangalore</li>
+                    </ul>
+                    
+                    <h2>2. Postgraduate Courses (PG)</h2>
+                    <h3>2.1 M.Com (Master of Commerce)</h3>
+                    <p><strong>Duration:</strong> 2 years</p>
+                    <p><strong>Eligibility:</strong> B.Com or equivalent degree</p>
+                    
+                    <h4>Top Colleges:</h4>
+                    <ul>
+                        <li>Delhi School of Economics (DSE), DU</li>
+                        <li>St. Xavier's College, Kolkata</li>
+                        <li>Loyola College, Chennai</li>
+                    </ul>
+                    
+                    <h3>2.2 MBA (Master of Business Administration)</h3>
+                    <p><strong>Duration:</strong> 2 years</p>
+                    <p><strong>Eligibility:</strong> Bachelor's degree in any discipline</p>
+                    
+                    <h4>Entrance Exams:</h4>
+                    <ul>
+                        <li>CAT, XAT, NMAT, SNAP, MAT, CMAT, GMAT</li>
+                    </ul>
+                    
+                    <h4>Top Colleges:</h4>
+                    <ul>
+                        <li>IIMs (Ahmedabad, Bangalore, Calcutta)</li>
+                        <li>XLRI Jamshedpur</li>
+                        <li>FMS Delhi</li>
+                        <li>ISB Hyderabad</li>
+                    </ul>
+                    
+                    <h2>3. Professional Courses</h2>
+                    <h3>3.1 CA (Chartered Accountancy)</h3>
+                    <p><strong>Conducted By:</strong> ICAI</p>
+                    <h4>Levels:</h4>
+                    <ul>
+                        <li>CA Foundation (After 12th)</li>
+                        <li>CA Intermediate</li>
+                        <li>CA Final</li>
+                    </ul>
+                    
+                    <h3>3.2 CS (Company Secretary)</h3>
+                    <p><strong>Conducted By:</strong> ICSI</p>
+                    <h4>Levels:</h4>
+                    <ul>
+                        <li>CSEET (After 12th)</li>
+                        <li>CS Executive</li>
+                        <li>CS Professional</li>
+                    </ul>
+                    
+                    <h2>4. Diploma & Certificate Courses</h2>
+                    <ul>
+                        <li>Diploma in Banking and Finance</li>
+                        <li>Diploma in Digital Marketing</li>
+                        <li>Certificate in Financial Accounting</li>
+                        <li>Certificate in Entrepreneurship & Business Development</li>
+                    </ul>
+                    
+                    <h2>Conclusion</h2>
+                    <p>Commerce and Management courses in India provide a strong foundation in finance, business, marketing, and economics. Top institutions like IIMs, SRCC, NMIMS, and XLRI offer excellent career prospects in the corporate world.</p>
+                </div>
+                <div id="career-arts" class="hidden">
+                    <h1>Arts and Humanities Courses in India</h1>
+                    <p>Arts and Humanities courses in India offer a broad range of subjects in literature, history, philosophy, sociology, political science, psychology, journalism, and fine arts. These courses provide diverse career opportunities in academia, media, civil services, law, social work, and creative fields.</p>
+            
+                    <div class="section">
+                        <h2>1. Undergraduate Courses (UG)</h2>
+                        <div class="subsection">
+                            <h3>1.1 BA (Bachelor of Arts)</h3>
+                            <p><strong>Duration:</strong> 3 years</p>
+                            <p><strong>Eligibility:</strong> 10+2 in any stream</p>
+                            <p><strong>Entrance Exams:</strong> CUET, DUET, JNUEE</p>
+                            <p><strong>Specializations:</strong></p>
+                            <ul>
+                                <li>History</li>
+                                <li>Political Science</li>
+                                <li>Sociology</li>
+                                <li>Psychology</li>
+                                <li>Economics</li>
+                                <li>English Literature</li>
+                            </ul>
+                            <p><strong>Top Colleges:</strong></p>
+                            <ul class="institutes">
+                                <li>Delhi University (Hindu College, Miranda House, Lady Shri Ram College)</li>
+                                <li>JNU, Delhi</li>
+                                <li>St. Xavier’s College, Mumbai</li>
+                                <li>Presidency University, Kolkata</li>
+                            </ul>
+                        </div>
+                        <div class="subsection">
+                            <h3>1.2 BA (Hons.)</h3>
+                            <p><strong>Focus Areas:</strong> In-depth study of a specific subject</p>
+                            <p><strong>Top Colleges:</strong> SRCC, LSR, Christ University</p>
+                        </div>
+                        <div class="subsection">
+                            <h3>1.3 BFA (Bachelor of Fine Arts)</h3>
+                            <p><strong>Duration:</strong> 4 years</p>
+                            <p><strong>Eligibility:</strong> 10+2 (Some institutes require an aptitude test)</p>
+                            <p><strong>Specializations:</strong> Painting, Sculpture, Animation, Graphic Design</p>
+                            <p><strong>Top Colleges:</strong></p>
+                            <ul class="institutes">
+                                <li>JJ School of Arts, Mumbai</li>
+                                <li>Banaras Hindu University (BHU)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>2. Postgraduate Courses (PG)</h2>
+                        <div class="subsection">
+                            <h3>2.1 MA (Master of Arts)</h3>
+                            <p><strong>Duration:</strong> 2 years</p>
+                            <p><strong>Entrance Exams:</strong> CUET-PG, JNUEE, DUET</p>
+                            <p><strong>Top Colleges:</strong></p>
+                            <ul class="institutes">
+                                <li>Delhi University</li>
+                                <li>JNU</li>
+                                <li>Tata Institute of Social Sciences</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>3. Diploma & Certificate Courses</h2>
+                        <ul>
+                            <li>Diploma in Creative Writing</li>
+                            <li>Diploma in Photography</li>
+                            <li>Certificate in Event Management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>Conclusion</h2>
+                        <p>Arts and Humanities courses in India offer diverse career opportunities in academia, media, law, fine arts, and social work. Top universities like DU, JNU, TISS, and IIMC provide excellent education in these fields.</p>
+                    </div>
+                </div>
+                <div id="career-design" class="hidden">
+                    <h1>Design and Architecture Courses in India</h1>
+                    <p>Design and Architecture courses in India offer diverse career opportunities in interior design, fashion design, industrial design, animation, urban planning, and architecture. These courses provide a combination of creativity, technical knowledge, and practical application.</p>
+            
+                    <div class="section">
+                        <h2>1. Architecture Courses</h2>
+                        <div class="subsection">
+                            <h3>1.1 Bachelor of Architecture (B.Arch)</h3>
+                            <p><strong>Duration:</strong> 5 years</p>
+                            <p><strong>Eligibility:</strong> 10+2 with PCM</p>
+                            <p><strong>Entrance Exams:</strong> NATA, JEE Main Paper 2</p>
+                            <p><strong>Top Colleges:</strong></p>
+                            <ul class="institutes">
+                                <li>School of Planning and Architecture (SPA), Delhi</li>
+                                <li>IIT Kharagpur, IIT Roorkee</li>
+                                <li>Sir J.J. College of Architecture, Mumbai</li>
+                                <li>CEPT University, Ahmedabad</li>
+                            </ul>
+                        </div>
+                        <div class="subsection">
+                            <h3>1.2 Master of Architecture (M.Arch)</h3>
+                            <p><strong>Duration:</strong> 2 years</p>
+                            <p><strong>Eligibility:</strong> B.Arch degree</p>
+                            <p><strong>Entrance Exams:</strong> GATE, CEED</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>2. Design Courses</h2>
+                        <div class="subsection">
+                            <h3>2.1 Bachelor of Design (B.Des)</h3>
+                            <p><strong>Duration:</strong> 4 years</p>
+                            <p><strong>Eligibility:</strong> 10+2 in any stream</p>
+                            <p><strong>Entrance Exams:</strong> UCEED, NID DAT, NIFT Entrance Exam</p>
+                            <p><strong>Specializations:</strong></p>
+                            <ul>
+                                <li>Industrial Design</li>
+                                <li>Graphic Design</li>
+                                <li>Interior Design</li>
+                                <li>Textile Design</li>
+                            </ul>
+                        </div>
+                        <div class="subsection">
+                            <h3>2.2 Master of Design (M.Des)</h3>
+                            <p><strong>Duration:</strong> 2 years</p>
+                            <p><strong>Eligibility:</strong> B.Des or equivalent degree</p>
+                            <p><strong>Entrance Exams:</strong> CEED, NID DAT PG, NIFT PG</p>
+                            <p><strong>Top Colleges:</strong></p>
+                            <ul class="institutes">
+                                <li>NID Ahmedabad</li>
+                                <li>IIT Bombay (IDC School of Design)</li>
+                                <li>Srishti Institute of Art, Bangalore</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>3. Diploma & Certificate Courses</h2>
+                        <ul>
+                            <li>Diploma in Interior Design – 1 year</li>
+                            <li>Certificate in Animation & Multimedia – 6 months to 1 year</li>
+                            <li>Diploma in Fashion Design – 1 year</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>Conclusion</h2>
+                        <p>Design and Architecture courses in India offer excellent career prospects in creative and technical fields. Top institutes like IITs, NID, NIFT, SPA, and CEPT provide industry-relevant education, preparing students for careers in architecture, fashion, interior design, and digital arts.</p>
+                    </div>
+                </div>
+                <div id="career-hotel" class="hidden">
+                    <h1>Hotel Management and Tourism Courses in India</h1>
+            
+                    <p>Hotel Management and Tourism courses in India provide career opportunities in hospitality, event management, travel & tourism, and food & beverage industries. These courses focus on practical skills, customer service, and business management.</p>
+                    
+                    <h2>1. Undergraduate Courses (UG)</h2>
+                    
+                    <h3>1.1 Bachelor of Hotel Management (BHM)</h3>
+                    <ul>
+                        <li><strong>Duration:</strong> 3–4 years</li>
+                        <li><strong>Eligibility:</strong> 10+2 in any stream</li>
+                        <li><strong>Entrance Exams:</strong> NCHM JEE, AIMA UGAT BHM, IPU CET</li>
+                        <li><strong>Top Colleges:</strong> IHM Delhi, IHM Mumbai, WGSHA Manipal</li>
+                    </ul>
+                    
+                    <h3>1.2 B.Sc in Hospitality and Hotel Administration (B.Sc HHA)</h3>
+                    <ul>
+                        <li><strong>Duration:</strong> 3 years</li>
+                        <li><strong>Eligibility:</strong> 10+2 in any stream</li>
+                        <li><strong>Entrance Exam:</strong> NCHM JEE</li>
+                        <li><strong>Top Colleges:</strong> IHM Institutes, BHU</li>
+                    </ul>
+                    
+                    <h2>2. Postgraduate Courses (PG)</h2>
+                    
+                    <h3>2.1 Master of Hotel Management (MHM)</h3>
+                    <ul>
+                        <li><strong>Duration:</strong> 2 years</li>
+                        <li><strong>Eligibility:</strong> Bachelor's in Hotel Management</li>
+                        <li><strong>Entrance Exam:</strong> PUTHAT, NCHMCT PG</li>
+                        <li><strong>Top Colleges:</strong> IHM Institutes, Christ University</li>
+                    </ul>
+                    
+                    <h3>2.2 MBA in Hospitality and Tourism Management</h3>
+                    <ul>
+                        <li><strong>Duration:</strong> 2 years</li>
+                        <li><strong>Eligibility:</strong> Bachelor's degree in any discipline</li>
+                        <li><strong>Entrance Exams:</strong> CAT, MAT, XAT, CMAT</li>
+                        <li><strong>Top Colleges:</strong> IIM Bangalore, IITTM</li>
+                    </ul>
+                    
+                    <h2>3. Diploma & Certificate Courses</h2>
+                    <ul>
+                        <li>Diploma in Hotel Management – 1–2 years</li>
+                        <li>Diploma in Food & Beverage Services – 1 year</li>
+                        <li>Certificate in Event Management – 6 months</li>
+                    </ul>
+                    
+                    <h2>Conclusion</h2>
+                    <p>Hotel Management and Tourism courses in India provide excellent career opportunities in hospitality, food & beverage, travel, and event management. Top institutes like IHMs, IITTM, and Christ University offer specialized training with strong industry placements.</p>
+            
+                </div>
+                <div id="career-law" class="hidden">
+                    <h1>Law Courses in India</h1>
+            
+                    <p>Law courses in India offer career opportunities in advocacy, corporate law, judiciary, legal consultancy, and public administration. These courses focus on legal principles, case studies, and courtroom practices.</p>
+                    
+                    <h2>1. Undergraduate Law Courses (UG)</h2>
+                    
+                    <h3>1.1 Bachelor of Laws (LLB)</h3>
+                    <ul>
+                        <li><strong>Duration:</strong> 3 years</li>
+                        <li><strong>Eligibility:</strong> Bachelor's degree in any stream</li>
+                        <li><strong>Entrance Exams:</strong> DU LLB, CUET PG (BHU), MH CET Law</li>
+                        <li><strong>Top Colleges:</strong> Faculty of Law (DU), BHU, GLC Mumbai</li>
+                    </ul>
+                    
+                    <h3>1.2 Integrated Law Courses (After 12th)</h3>
+                    <ul>
+                        <li><strong>Duration:</strong> 5 years</li>
+                        <li><strong>Eligibility:</strong> 10+2 in any stream</li>
+                        <li><strong>Courses:</strong> BA LLB, BBA LLB, B.Com LLB, B.Sc LLB</li>
+                        <li><strong>Entrance Exams:</strong> CLAT, AILET, LSAT India, SLAT</li>
+                        <li><strong>Top Colleges:</strong> NLUs (NLSIU, NALSAR, NUJS), JGLS, SLS Pune</li>
+                    </ul>
+                    
+                    <h2>2. Postgraduate Law Courses (PG)</h2>
+                    
+                    <h3>2.1 Master of Laws (LLM)</h3>
+                    <ul>
+                        <li><strong>Duration:</strong> 1 or 2 years</li>
+                        <li><strong>Eligibility:</strong> LLB degree</li>
+                        <li><strong>Entrance Exams:</strong> CLAT PG, AILET PG, DU LLM</li>
+                        <li><strong>Specializations:</strong> Corporate Law, Criminal Law, Constitutional Law, Human Rights Law</li>
+                        <li><strong>Top Colleges:</strong> NLSIU Bangalore, NALSAR Hyderabad, DU</li>
+                    </ul>
+                    
+                    <h3>2.2 MBA in Business Law</h3>
+                    <ul>
+                        <li><strong>Duration:</strong> 2 years</li>
+                        <li><strong>Eligibility:</strong> Bachelor's degree in any field</li>
+                        <li><strong>Top Colleges:</strong> NLU Jodhpur, IIM Ahmedabad</li>
+                    </ul>
+                    
+                    <h2>3. Diploma & Certificate Law Courses</h2>
+                    <ul>
+                        <li>Diploma in Cyber Law – 1 year (NALSAR, Asian School of Cyber Laws)</li>
+                        <li>Diploma in Corporate Law – 1 year (NUJS Kolkata, ILS Pune)</li>
+                        <li>Certificate in Intellectual Property Law – 6 months (WIPO-India, NLU Delhi)</li>
+                    </ul>
+                    
+                    <h2>4. Doctoral Law Courses</h2>
+                    
+                    <h3>4.1 PhD in Law</h3>
+                    <ul>
+                        <li><strong>Duration:</strong> 3–5 years</li>
+                        <li><strong>Eligibility:</strong> LLM degree</li>
+                        <li><strong>Top Institutes:</strong> NLSIU Bangalore, JNU, NLU Delhi</li>
+                    </ul>
+                    
+                    <h2>Conclusion</h2>
+                    <p>Law courses in India provide excellent career opportunities in litigation, corporate law, and judiciary. Top law colleges like NLUs, DU, and JGLS offer world-class legal education and placements in top firms and government sectors.</p>
+            
+                </div>
+                <div id="career-agriculture" class="hidden">
+                    <h1>Agriculture and Environmental Science Courses in India</h1>
+            
+                    <p>Agriculture and Environmental Science courses in India offer career opportunities in farming, agribusiness, food technology, forestry, ecology, climate science, and environmental management. These courses focus on sustainable development, conservation, and scientific advancements.</p>
+                    
+                    <h2>1. Agriculture Courses in India</h2>
+                    
+                    <h3>1.1 Undergraduate Agriculture Courses (UG)</h3>
+                    
+                    <h4>1.1.1 B.Sc Agriculture</h4>
+                    <ul>
+                        <li><strong>Duration:</strong> 4 years</li>
+                        <li><strong>Eligibility:</strong> 10+2 with PCM/PCB/Agriculture</li>
+                        <li><strong>Entrance Exams:</strong> ICAR AIEEA UG, KEAM, EAMCET, KCET</li>
+                        <li><strong>Top Colleges:</strong> IARI Delhi, TNAU, PAU</li>
+                    </ul>
+                    
+                    <h4>1.1.2 B.Tech in Agricultural Engineering</h4>
+                    <ul>
+                        <li><strong>Duration:</strong> 4 years</li>
+                        <li><strong>Eligibility:</strong> 10+2 with PCM</li>
+                        <li><strong>Entrance Exams:</strong> JEE Main, ICAR AIEEA UG</li>
+                        <li><strong>Top Colleges:</strong> IIT Kharagpur, G.B. Pant University</li>
+                    </ul>
+                    
+                    <h4>1.1.3 Other UG Courses</h4>
+                    <ul>
+                        <li>B.Sc Horticulture – Fruits, vegetables, floriculture</li>
+                        <li>B.Sc Forestry – Forest conservation & management</li>
+                        <li>B.Sc Dairy Technology – Milk production & processing</li>
+                    </ul>
+                    
+                    <h3>1.2 Postgraduate Agriculture Courses (PG)</h3>
+                    
+                    <h4>1.2.1 M.Sc Agriculture</h4>
+                    <ul>
+                        <li><strong>Duration:</strong> 2 years</li>
+                        <li><strong>Eligibility:</strong> B.Sc Agriculture or related degree</li>
+                        <li><strong>Entrance Exams:</strong> ICAR AIEEA PG, CUET PG</li>
+                        <li><strong>Top Colleges:</strong> IARI Delhi, TNAU</li>
+                    </ul>
+                    
+                    <h4>1.2.2 M.Tech in Agricultural Engineering</h4>
+                    <ul>
+                        <li><strong>Duration:</strong> 2 years</li>
+                        <li><strong>Eligibility:</strong> B.Tech in Agricultural Engineering</li>
+                        <li><strong>Entrance Exams:</strong> GATE, ICAR AIEEA PG</li>
+                    </ul>
+                    
+                    <h3>1.3 Diploma & Certificate Courses in Agriculture</h3>
+                    <ul>
+                        <li>Diploma in Agriculture – 2 years</li>
+                        <li>Certificate in Organic Farming – 6 months</li>
+                        <li>Diploma in Dairy Technology – 1 year</li>
+                    </ul>
+                    
+                    <h2>2. Environmental Science Courses in India</h2>
+                    
+                    <h3>2.1 Undergraduate Environmental Science Courses (UG)</h3>
+                    
+                    <h4>2.1.1 B.Sc Environmental Science</h4>
+                    <ul>
+                        <li><strong>Duration:</strong> 3 years</li>
+                        <li><strong>Eligibility:</strong> 10+2 with PCM/PCB</li>
+                        <li><strong>Top Colleges:</strong> JNU, Fergusson College</li>
+                    </ul>
+                    
+                    <h4>2.1.2 B.Tech in Environmental Engineering</h4>
+                    <ul>
+                        <li><strong>Duration:</strong> 4 years</li>
+                        <li><strong>Eligibility:</strong> 10+2 with PCM</li>
+                        <li><strong>Entrance Exams:</strong> JEE Main, State-level exams</li>
+                        <li><strong>Top Colleges:</strong> IIT Delhi, IIT Kharagpur, NIT Trichy</li>
+                    </ul>
+                    
+                    <h3>2.2 Postgraduate Environmental Science Courses (PG)</h3>
+                    
+                    <h4>2.2.1 M.Sc Environmental Science</h4>
+                    <ul>
+                        <li><strong>Duration:</strong> 2 years</li>
+                        <li><strong>Eligibility:</strong> B.Sc Environmental Science or related field</li>
+                        <li><strong>Entrance Exams:</strong> CUET PG, JNUEE</li>
+                        <li><strong>Top Colleges:</strong> JNU, BHU</li>
+                    </ul>
+                    
+                    <h4>2.2.2 M.Tech in Environmental Engineering</h4>
+                    <ul>
+                        <li><strong>Duration:</strong> 2 years</li>
+                        <li><strong>Eligibility:</strong> B.Tech in Environmental Engineering</li>
+                        <li><strong>Entrance Exams:</strong> GATE</li>
+                        <li><strong>Top Colleges:</strong> IIT Bombay, IIT Madras</li>
+                    </ul>
+                    
+                    <h3>2.3 Diploma & Certificate Courses in Environmental Science</h3>
+                    <ul>
+                        <li>Diploma in Environmental Management – 1 year</li>
+                        <li>Certificate in Climate Change & Sustainable Development – 6 months</li>
+                    </ul>
+                    
+                    <h2>3. Doctoral Courses in Agriculture & Environmental Science</h2>
+                    <ul>
+                        <li>PhD in Agriculture – 3–5 years (IARI, ICAR Institutes)</li>
+                        <li>PhD in Environmental Science – 3–5 years (IITs, JNU)</li>
+                    </ul>
+                    
+                    <h2>Conclusion</h2>
+                    <p>Agriculture and Environmental Science courses in India offer excellent career opportunities in sustainable development, agribusiness, food technology, and environmental conservation. Top institutes like IARI, IITs, and JNU provide research-driven education in these fields.</p>
+                    
+                </div>
+                <div id="career-aviation" class="hidden" >
+                    <h1>Aviation Courses in India</h1>
+                    <p>Aviation is a dynamic field that offers various career opportunities in pilot training, aircraft maintenance, air traffic control, airport management, and aviation hospitality. Aviation courses in India are available at diploma, undergraduate, postgraduate, and certification levels.</p>
+            
+                    <div class="section">
+                        <h2>1. Pilot Training Courses</h2>
+                        <div class="subsection">
+                            <h3>1.1 Commercial Pilot License (CPL)</h3>
+                            <p><strong>Duration:</strong> 12–18 months</p>
+                            <p><strong>Eligibility:</strong></p>
+                            <ul>
+                                <li>10+2 with Physics & Mathematics</li>
+                                <li>Minimum age: 17 years</li>
+                                <li>Medical fitness as per DGCA norms</li>
+                            </ul>
+                            <p><strong>Entrance Exam:</strong> DGCA Class 1 Medical Test & Institute-specific exams</p>
+                            <p><strong>Course Details:</strong></p>
+                            <ul>
+                                <li>Flying training (200 hours)</li>
+                                <li>Ground school (navigation, meteorology, aviation law)</li>
+                            </ul>
+                            <p><strong>Top Institutes:</strong></p>
+                            <ul class="institutes">
+                                <li>Indira Gandhi Institute of Aeronautics, Kochi</li>
+                                <li>Indira Gandhi Institute of Aerospace Engineering, Pune</li>
+                                <li>Rajiv Gandhi Aviation Academy, Hyderabad</li>
+                                <li>Capt. Gopi Aviation, Bangalore</li>
+                            </ul>
+                        </div>
+                        <div class="subsection">
+                            <h3>1.2 Private Pilot License (PPL)</h3>
+                            <p><strong>Duration:</strong> 6–12 months</p>
+                            <p><strong>Eligibility:</strong> Same as CPL</p>
+                            <p><strong>Scope:</strong> Recreational flying or as a step towards CPL</p>
+                        </div>
+                        <div class="subsection">
+                            <h3>1.3 Student Pilot License (SPL)</h3>
+                            <p><strong>Duration:</strong> 4–6 months</p>
+                            <p><strong>Eligibility:</strong> Entry-level license for pilot training aspirants</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>2. Undergraduate Aviation Courses (B.Sc, BBA, B.Tech)</h2>
+                        <div class="subsection">
+                            <h3>2.1 B.Sc. in Aviation</h3>
+                            <p><strong>Duration:</strong> 3 years</p>
+                            <p><strong>Eligibility:</strong> 10+2 with PCM</p>
+                            <p><strong>Subjects Covered:</strong> Air navigation, aircraft maintenance, air traffic control</p>
+                            <p><strong>Top Colleges:</strong></p>
+                            <ul class="institutes">
+                                <li>Indira Gandhi Institute of Aeronautics, Chandigarh</li>
+                                <li>Amity University, Noida</li>
+                                <li>Mumbai University</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>3. Diploma Courses in Aviation</h2>
+                        <div class="subsection">
+                            <h3>3.1 Diploma in Aviation</h3>
+                            <p><strong>Duration:</strong> 6 months to 1 year</p>
+                            <p><strong>Eligibility:</strong> 10+2</p>
+                            <p><strong>Scope:</strong> Covers airline management, ground staff operations</p>
+                            <p><strong>Top Institutes:</strong> Frankfinn Institute, Indira Gandhi Institute of Aeronautics</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>4. Postgraduate Aviation Courses (M.Sc, MBA, PG Diploma)</h2>
+                        <div class="subsection">
+                            <h3>4.1 M.Sc. in Aviation</h3>
+                            <p><strong>Duration:</strong> 2 years</p>
+                            <p><strong>Eligibility:</strong> B.Sc in Aviation or related fields</p>
+                            <p><strong>Subjects Covered:</strong> Aviation safety, air traffic management</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>5. Certificate Courses in Aviation</h2>
+                        <ul>
+                            <li>Cabin Crew Training (3–6 months)</li>
+                            <li>Ground Staff Training (6 months)</li>
+                            <li>Aviation Safety and Security Management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>Conclusion</h2>
+                        <p>Aviation courses in India offer excellent career opportunities in pilot training, airport management, aircraft maintenance, and air traffic control. DGCA-approved training institutes and top universities provide world-class education in this field.</p>
+                    </div>
+                </div>
+                    
+            </div>
+            <button id="careers-more" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">More</button>
+        </div>
+        
+
+    </div>
+</div>
+
+<!-- Counselors Tab -->
+<div id="counselors" class="tab-content">
+    <div id="counselors-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+    </div>
+    <div id="bookingSection" class="section">
+        <h2>Book a Session</h2>
+    
+        <div class="item-list" id="availableSlots">
+            <!-- Available slots will be displayed here -->
+        </div>
+    </div>
+    <!-- Counselor Profile Container (initially hidden) -->
+    <div id="counselor-profile" class="hidden">
+    </div>
+</div>
+
+        <!-- Aptitude Test Tab -->
+  <div id="aptitude" class="tab-content">
+    <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold mb-4">Career Aptitude Test</h2>
+    
+            <!-- Initial information screen -->
+            <div id="test-intro" class="mb-6">
+                <p class="text-gray-600 mb-4">Take our comprehensive aptitude test to discover career paths that align with your unique strengths, interests, and personality traits.</p>
+        
+                <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                    <h3 class="font-semibold text-blue-700 mb-2">About this test:</h3>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>10-15 minutes to complete</li>
+                        <li>25 multiple-choice questions</li>
+                        <li>Covers interests, skills, work styles, and preferences</li>
+                        <li>Provides personalized career recommendations</li>
+                        <li>No right or wrong answers - just be honest!</li>
+                    </ul>
+                </div>
+        
+                <div class="flex justify-center">
+                    <button onclick="startTest()" class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition duration-300 flex items-center">
+                        Start Test
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Test Questions Container (initially hidden) -->
+            <div id="test-questions" class="hidden">
+                <!-- Questions will be dynamically loaded here -->
+                <div id="question-container"></div>
+                <button onclick="submitTest()" class="bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-medium mt-4 hover:bg-green-700 transition duration-300">Submit Test</button>
+            </div>
+        </div> 
+    </div>  
+</div>  
+
+<!-- Schedule Tab -->
+<div id="schedule" class="tab-content">
+    <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold mb-4">Schedule a Counseling Session</h2>
+            <p class="text-gray-600 mb-6">Book a one-on-one session with our career counselors</p>
+            <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">View Available Slots</button>
+        </div>
+    </div>
+</div>
+        
+        <!-- Feedback Tab -->
+        <div id="feedback" class="tab-content">
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-4">We Value Your Feedback</h2>
+                    <p class="text-gray-600 mb-6">Please share your thoughts about our platform to help us improve. No personal information is collected.</p>
+                    
+                    <form id="feedbackForm" class="space-y-6">
+                        <!-- Rating section -->
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">How would you rate your overall experience?</label>
+                            <div class="rating">
+                                <input type="radio" name="rating" id="star5" value="5" />
+                                <label for="star5" title="5 stars">★</label>
+                                <input type="radio" name="rating" id="star4" value="4" />
+                                <label for="star4" title="4 stars">★</label>
+                                <input type="radio" name="rating" id="star3" value="3" />
+                                <label for="star3" title="3 stars">★</label>
+                                <input type="radio" name="rating" id="star2" value="2" />
+                                <label for="star2" title="2 stars">★</label>
+                                <input type="radio" name="rating" id="star1" value="1" />
+                                <label for="star1" title="1 star">★</label>
+                            </div>
+                        </div>
+                        
+                        <!-- Which features did you find most helpful -->
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Which features did you find most helpful?</label>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="careerInfo" name="helpfulFeatures" value="careerInfo" class="mr-2">
+                                    <label for="careerInfo">Career Information</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="counselorProfiles" name="helpfulFeatures" value="counselorProfiles" class="mr-2">
+                                    <label for="counselorProfiles">Counselor Profiles</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="aptitudeTest" name="helpfulFeatures" value="aptitudeTest" class="mr-2">
+                                    <label for="aptitudeTest">Aptitude Test</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="scheduling" name="helpfulFeatures" value="scheduling" class="mr-2">
+                                    <label for="scheduling">Session Scheduling</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- How did you hear about us -->
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">How did you hear about Career Compass?</label>
+                            <select class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Please select</option>
+                                <option value="search">Search Engine</option>
+                                <option value="social">Social Media</option>
+                                <option value="friend">Friend or Family</option>
+                                <option value="school">School/College</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Feedback text area -->
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">What can we improve?</label>
+                            <textarea rows="4" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Share your suggestions..."></textarea>
+                        </div>
+                        
+                        <!-- Additional questions -->
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Did you find the career information useful?</label>
+                            <div class="flex space-x-4">
+                                <div class="flex items-center">
+                                    <input type="radio" id="useful-yes" name="useful" value="yes" class="mr-1">
+                                    <label for="useful-yes">Yes</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" id="useful-somewhat" name="useful" value="somewhat" class="mr-1">
+                                    <label for="useful-somewhat">Somewhat</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" id="useful-no" name="useful" value="no" class="mr-1">
+                                    <label for="useful-no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit button -->
+                        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Submit Feedback</button>
+                        
+                        <!-- Success message - hidden by default -->
+                        <div id="success-message" class="hidden p-3 bg-green-100 text-green-700 rounded">
+                            Thank you for your feedback! We appreciate your input.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- About Us Tab -->
+        <div id="about" class="tab-content">
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-4">About Career Compass</h2>
+                    
+                    <!-- Mission & Vision -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">Our Mission</h3>
+                        <p class="text-gray-700 mb-4">
+                            At Career Compass, we believe that every individual deserves to find a fulfilling career path that aligns with their skills, interests, and ambitions. Our mission is to provide personalized guidance and comprehensive resources to help students and professionals navigate their career journeys with confidence.
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">Our Vision</h3>
+                        <p class="text-gray-700">
+                            To become the most trusted career guidance platform that empowers individuals to make informed decisions about their professional futures, creating a world where everyone can pursue careers they are passionate about.
+                        </p>
+                        <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+                        <div class="contact-container">
+                            <div class="contact-info">
+                                <div class="info-box">
+                                    <h3>Get in Touch</h3>
+                                    <p><strong>Email:</strong> info@careercompass.com</p>
+                                    <p><strong>Phone:</strong> (555) 123-4567</p>
+                                </div>
+                                            
+                                    <div class="info-box">
+                                        <h3>Connect With Us</h3>
+                                            <p>Follow us on social media for career tips, job postings, and success stories!</p>
+                                            <div class="social-links">
+                                                <a href="#" aria-label="Facebook">FB</a>
+                                                <a href="#" aria-label="Twitter">TW</a>
+                                                <a href="#" aria-label="LinkedIn">LI</a>
+                                                <a href="#" aria-label="Instagram">IG</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+       
+    </div>
+    
+    <script src="home.js"></script>
+</body>
+</html>

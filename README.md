@@ -1,37 +1,74 @@
-# Node.js + MongoDB Backend
+# Career Compass
 
-A simple backend setup using **Node.js**, **Express**, and **MongoDB**.
+A responsive career guidance web application that helps students discover a career field suited to their interests through an interactive aptitude test.
 
-## 🛠️ Requirements
+## Overview
 
-- **Arch Linux** (or any Linux distro)
-- **Node.js & npm** (Install via `sudo pacman -S nodejs npm`)
-- **MongoDB** (Install via `yay -S mongodb-bin` or `paru -S mongodb-bin`)
+Career Compass presents students with a series of multiple-choice questions spanning various career fields. Each question offers a minimum of four options, and every option is mapped to a specific field with an associated point value. As the student answers, their option-wise scores are aggregated across all questions, and the platform recommends the field with the highest cumulative score — giving students a data-driven starting point for exploring career paths.
 
-## 🚀 Setup & Installation
+## Features
 
-### 1️⃣ Clone the Repository  
-```sh
-git clone https://github.com/your-repo/node-mongo-backend.git
-cd node-mongo-backend
+- **Interactive aptitude test** — multiple-choice questions covering a range of career fields
+- **Field-weighted scoring system** — every answer option contributes points toward a specific field
+- **Automatic field recommendation** — results are calculated from the student's cumulative scores
+- **Structured navigation** — clean, user-friendly interface for browsing and completing the test
+- **Responsive design** — works across desktop and mobile screens
 
-2️⃣ Install Dependencies
+## Tech Stack
 
-npm install
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Node.js, Express
+- **Database:** MongoDB
 
-3️⃣ Configure Environment Variables
+## Getting Started
 
-Create a .env file and add:
+### Prerequisites
 
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/yourdbname
-JWT_SECRET=your_secret_key
+- Node.js (v16 or later recommended)
+- MongoDB (local instance or a hosted cluster, e.g., MongoDB Atlas)
 
-4️⃣ Start MongoDB (if not running)
+### Installation
 
-sudo systemctl start mongod
+1. Clone the repository
+   ```bash
+   git clone https://github.com/Ashna2255/career-compass.git
+   cd career-compass
+   ```
 
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-Production Mode
+3. Configure environment variables
+   Copy `.env.example` to `.env` and fill in your own values:
+   ```bash
+   cp .env.example .env
+   ```
 
-npm start
+4. Start the server
+   ```bash
+   npm start
+   ```
+
+5. Open the app in your browser at `http://localhost:5000` (or the port set in `.env`)
+
+## How the Scoring Works
+
+Each question in the test presents multiple options, and each option is pre-mapped to a specific career field along with a point value. As a student completes the test, their selections are tallied per field. Once all questions are answered, the field with the highest total score is presented as the recommended career path.
+
+## Project Structure
+
+```
+career-compass/
+├── models/       # MongoDB schemas
+├── routes/       # Express route handlers
+├── public/       # Frontend static assets (HTML, CSS, JS)
+├── server.js     # App entry point
+├── .env.example  # Sample environment variables
+└── package.json
+```
+
+## License
+
+This project is for educational purposes as part of a personal/academic portfolio.
